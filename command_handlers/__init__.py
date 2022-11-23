@@ -1,5 +1,3 @@
-from enum import Enum
-
 __all__ = (
     "start",
     "info",
@@ -8,9 +6,10 @@ __all__ = (
     "foreign_exchange",
     "markets",
     "news",
-    "stocks",
+    "stock",
     "crypto",
-    "command_handlers"
+    "handlers",
+    "error_handler"
 )
 
 
@@ -21,15 +20,16 @@ from .financial_statement import financial_statement
 from .foreign_exchange import foreign_exchange
 from .markets import markets
 from .news import news
-from .stocks import stock
+from .stock import stock
 from .crypto import crypto
+from .error_handler import error_handler
 
-command_handlers = {
+handlers = {
     "start": start,
     "info": info,
     "fx": foreign_exchange,
     "markets": markets,
-    "stock": stocks,
+    "stock": stock,
     "fs": financial_statement,
     "analyze": analyze,
     "crypto": crypto,
